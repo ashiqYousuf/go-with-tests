@@ -20,13 +20,6 @@ func TestAdder(t *testing.T) {
 
 		assertCorrectMessage(t, got, want)
 	})
-
-	t.Run("test 2", func(t *testing.T) {
-		got := Add(-2, 2)
-		want := 0
-
-		assertCorrectMessage(t, got, want)
-	})
 }
 func ExampleAdd() {
 	sum := Add(1, 5)

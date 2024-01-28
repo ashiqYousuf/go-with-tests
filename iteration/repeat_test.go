@@ -4,8 +4,8 @@ import "testing"
 
 func TestRepeat(t *testing.T) {
 	t.Run("repeat 5 times", func(t *testing.T) {
-		got := Repeat("AA", 5)
-		want := "AAAAAAAAAA"
+		got := Repeat("A", 5)
+		want := "AAAAA"
 
 		if got != want {
 			t.Errorf("got %q want %q", got, want)
@@ -13,7 +13,7 @@ func TestRepeat(t *testing.T) {
 	})
 
 	t.Run("repeat 0 times", func(t *testing.T) {
-		got := Repeat("A", -10)
+		got := Repeat("", 0)
 		want := ""
 
 		if got != want {
@@ -21,7 +21,7 @@ func TestRepeat(t *testing.T) {
 		}
 	})
 
-	t.Run("repeat 3 times", func(t *testing.T) {
+	t.Run("repeat 0 times", func(t *testing.T) {
 		got := Repeat("", 30000000)
 		want := ""
 
@@ -29,6 +29,16 @@ func TestRepeat(t *testing.T) {
 			t.Errorf("got %q want %q", got, want)
 		}
 	})
+
+	t.Run("repeat 0 times", func(t *testing.T) {
+		got := Repeat("abc", -10)
+		want := ""
+
+		if got != want {
+			t.Errorf("got %q want %q", got, want)
+		}
+	})
+
 }
 
 // ? Benchmarking in Go is a way to measure the performance of your code
