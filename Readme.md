@@ -12,3 +12,9 @@
 
 
 ### Note:- By convention you should keep your method receiver types the same for consistency.
+
+
+#### Errors can be converted to a string with the .Error() method.
+
+
+### An interesting property of maps is that you can modify them without passing as an address.A map value is a pointer to a runtime.hmap structure.
