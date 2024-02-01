@@ -18,3 +18,6 @@
 
 
 ### An interesting property of maps is that you can modify them without passing as an address.A map value is a pointer to a runtime.hmap structure.
+
+
+### The Buffer type from the bytes package implements the Writer interface, buffer := bytes.Buffer{}
