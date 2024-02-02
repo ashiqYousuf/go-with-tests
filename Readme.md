@@ -21,3 +21,6 @@
 
 
 ### The Buffer type from the bytes package implements the Writer interface, buffer := bytes.Buffer{}
+
+
+### if a test is working with more than 3 mocks then it is a red flag - time for a rethink on the design.
