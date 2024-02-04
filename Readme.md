@@ -29,3 +29,7 @@
 ### ideally we don't want to be relying on external services to test our code because they can be Slow, Flaky, Can't test edge cases.
 
 ###  the standard library, there is a package called net/http/httptest which enables users to easily create a mock HTTP server.
+
+### in fact, in Go any is an alias for interface{}.
+
+### Reflection in computing is the ability of a program to examine its own structure, particularly through types.
