@@ -4,6 +4,11 @@ import (
 	"reflect"
 )
 
+// ? NOTE
+
+// ? val := reflect.ValueOf(value)
+// ? INVOKE:- val.Interface() always
+
 // ! PROBLEM :- write a function walk(x interface{}, fn func(string))
 // ! which takes a struct x and calls fn for all strings fields found inside.
 
