@@ -12,9 +12,9 @@ type Profile struct {
 
 func TestReflection(t *testing.T) {
 	cases := []struct {
-		Name          string
-		Input         interface{}
-		ExpectedCalls []string
+		Name   string
+		Input  interface{}
+		Output []string
 	}{
 		{
 			"struct with one string field",
@@ -98,8 +98,8 @@ func TestReflection(t *testing.T) {
 				got = append(got, input)
 			})
 
-			if !reflect.DeepEqual(got, test.ExpectedCalls) {
-				t.Errorf("got %v, want %v", got, test.ExpectedCalls)
+			if !reflect.DeepEqual(got, test.Output) {
+				t.Errorf("got %v, want %v", got, test.Output)
 			}
 		})
 	}
