@@ -157,6 +157,19 @@ func TestReflection(t *testing.T) {
 			t.Errorf("got %v, want %v", got, want)
 		}
 	})
+
+	t.Run("simple string", func(t *testing.T) {
+		var got []string
+		want := []string{"A SIMPLE STRING"}
+
+		walk("A SIMPLE STRING", func(input string) {
+			got = append(got, input)
+		})
+
+		if !reflect.DeepEqual(got, want) {
+			t.Errorf("got %v, want %v", got, want)
+		}
+	})
 }
 
 func assertContains(t testing.TB, haystack []string, needle string) {
